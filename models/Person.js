@@ -4,20 +4,20 @@ const PersonShema = new mongoose.Schema(
     {
         firstName: {
             type: String,
-            required: true
+            required: [true, 'Must provide fisrt Name' ]
         },
 
         lastName: {
             type: String,
-            required: true
+            required: [true, 'Must provide last Name' ]
         },
 
         telephone: {
             type: Number,
-            required: true,
+            required: [true, 'Must provide telephone' ],
         },
 
-        userId,
+        userId: String,
         typePerson: {
             type: String,
             enum: ['P', 'S'],
